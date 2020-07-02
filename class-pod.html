@@ -35,6 +35,9 @@
             .with-padding {
                 padding: 0 2em;
             }
+            .full-padding {
+                padding: 1.25em 2em 1em 2em;
+            }
             
             .text-style-1 {
                 font-size: 2em; 
@@ -71,7 +74,7 @@
             .call-center-text{
                 color: #FFFFFF;
                 font-size: 0.875em;
-                line-height: 1em;
+                line-height: 1.5em;
                 text-align: center;
                 margin-top: 1em;
                 margin-bottom: 1em;
@@ -117,7 +120,7 @@
             }
 
             .store-card {
-                border-top: 4px solid #FFCBCB;
+                border-top: 1em solid #EDEDF4;
                 border-bottom: 1em solid #EDEDF4;
             }
             .footer-card {
@@ -128,7 +131,6 @@
 
             .order-list {
                 width: 100%;
-                padding-bottom: 18px;
             }
 
             .separator {
@@ -187,12 +189,21 @@
                 width: 100%;
             }
 
+            .with-spacing {
+                letter-spacing: 0.5px;
+            }
+
+            .with-large-spacing {
+                letter-spacing: 0.75px;
+            }
+
+            .grey-separator {
+                border-bottom: 1em solid #EDEDF4;
+            }
+
             @media screen and (max-width: 500px) {
                 #body, table {
                     font-size: 12px;
-                }
-                .order-list {
-                    padding-bottom: 12px;
                 }
             }
         </style>
@@ -222,10 +233,18 @@
         <table class="with-padding" style="width: 100%;">
             <tr>
                 <td style="width: 50%;">
+                    <div class="text-style-4 is-grey bold align-left">Toko</div>
+                </td>
+                <td style="width: 50%;">
+                    <div class="text-style-4 is-grey align-right with-spacing">SGM Official Store</div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50%;">
                     <div class="text-style-4 is-grey bold align-left">Total Tagihan</div>
                 </td>
                 <td style="width: 50%;">
-                    <div class="text-style-4 is-red bold align-right">Rp 1.329.600</div>    
+                    <div class="text-style-4 is-red bold align-right with-large-spacing">Rp 1.329.600</div>    
                 </td>
             </tr>
             <tr>
@@ -233,7 +252,7 @@
                     <div class="text-style-4 is-grey bold align-left">Nomor Pesanan</div>
                 </td>
                 <td style="width: 50%;">
-                    <div class="text-style-4 is-grey align-right">#213145445</div>
+                    <div class="text-style-4 is-grey align-right with-spacing">#213145445</div>
                 </td>
             </tr>
             <tr>
@@ -241,7 +260,7 @@
                     <div class="text-style-4 is-grey bold align-left">Status Pembayaran</div>
                 </td>
                 <td style="width: 50%;">
-                    <div class="text-style-4 is-grey align-right">Bayar di Tempat</div>
+                    <div class="text-style-4 is-grey align-right with-spacing">Bayar di Tempat</div>
                 </td>
             </tr>
 
@@ -267,12 +286,11 @@
             </table>
 
 
-            <div class="text-style-5 align-left bold is-grey with-padding" style="margin-top: 1.5em; margin-bottom: 1em;">Detail Pesanan</div>
+            <div class="text-style-5 align-left bold is-grey with-padding" style="margin-top: 1.5em; margin-bottom: 1em;"></div>
     
-            <!-- loop store here -->
-            <div class="store-card with-padding">
-                <div class="text-style-5 is-grey" style="margin: 1em 0;">
-                    Toko: <b>Official Store SGM</b>
+            <div class="store-card full-padding">
+                <div class="text-style-5 is-grey bold" style="margin-bottom: 1em;">
+                    Daftar Belanja
                 </div>
                 <table class="order-list">
                     <!-- loop product here -->
@@ -282,10 +300,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="half-width text-style-3 is-soft-grey align-left bold">
+                        <td class="half-width text-style-3 is-soft-grey align-left bold with-spacing">
                             2 x Rp 319.800
                         </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
+                        <td class="half-width is-grey text-style-3 bold align-right with-spacing">
                             Rp 639.800
                         </td>
                     </tr>
@@ -299,91 +317,70 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="half-width text-style-3 is-soft-grey align-left bold">
+                        <td class="half-width text-style-3 is-soft-grey align-left bold with-spacing">
                             2 x Rp 319.800
                         </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
+                        <td class="half-width is-grey text-style-3 bold align-right with-spacing">
                             Rp 639.800
                         </td>
                     </tr>
                     <tr class="spacer"></tr>
                     <!-- end of example looped product -->
-
-                    <tr>
-                        <td class="half-width is-soft-grey text-style-3 bold align-left">
-                            Reguler <span class="is-light-grey">(5-7 hari)</span>
-                        </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
-                            Rp 50.000
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="half-width is-soft-grey text-style-3 align-left">
-                            JNE YES, JNE OKE, SiCepat
-                        </td>
-                    </tr>
-
                 </table>
             </div>
-            <!-- end of store loop -->
 
-            <!-- example of store (delete this after using store loop) -->
-            <div class="store-card with-padding">
-                <div class="text-style-5 is-grey" style="margin: 1em 0;">
-                    Toko: <b>Official Store SGM</b>
+            <div class="grey-separator full-padding">
+                <div class="text-style-5 is-grey bold" style="margin-bottom: 1em;">
+                    Biaya Pengiriman
                 </div>
-                <table class="order-list">
-                    <!-- loop product here -->
+                <div class="text-style-5 is-soft-grey bold">
+                    Regular
+                </div>
+                <table style="width: 100%;">
                     <tr>
-                        <td class="text-style-3 align-left is-grey half-width">
-                            Susu SGM Eksplor Advance SOYA Rasa Madu400 gr
+                        <td class="half-width is-soft-grey bold text-style-3 align-left" style="width: 50%;">
+                            JNE YES <span class="is-light-grey">(5-7 hari)
                         </td>
-                    </tr>
-                    <tr>
-                        <td class="half-width text-style-3 is-soft-grey align-left bold">
-                            2 x Rp 319.800
-                        </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
-                            Rp 639.800
-                        </td>
-                    </tr>
-                    <tr class="spacer"></tr>
-                    <!-- end of product loop -->
-
-                    <!-- example looped product (delete this after using loop) -->
-                    <tr>
-                        <td class="text-style-3 align-left is-grey half-width">
-                            Susu SGM Eksplor Advance SOYA Rasa Madu400 gr
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="half-width text-style-3 is-soft-grey align-left bold">
-                            2 x Rp 319.800
-                        </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
-                            Rp 639.800
-                        </td>
-                    </tr>
-                    <tr class="spacer"></tr>
-                    <!-- end of example looped product -->
-
-                    <tr>
-                        <td class="half-width is-soft-grey text-style-3 bold align-left">
-                            Reguler <span class="is-light-grey">(5-7 hari)</span>
-                        </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
+                        <td class="half-width is-grey text-style-3 bold align-right with-spacing" style="width: 50%;">
                             Rp 50.000
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="half-width is-soft-grey text-style-3 align-left">
-                            JNE YES, JNE OKE, SiCepat
                         </td>
                     </tr>
 
                 </table>
+                <div style="margin: 1.5em 0 .5em 0; color: #666666; font-size: 1em; font-weight: 700; line-height: 1.5em; text-align: left;">
+                    Tujuan Pengiriman
+                </div>
+                <div style="background-color: #F7F7FF;
+                border-radius: 4px; padding: 1.5em;">
+                    <div style="color: #666666;
+                    font-size: 1em;
+                    font-weight: 700;
+                    line-height: 1.5em;
+                    text-align: left;">Rumah</div>
+                    <div style="color: #666666;
+                    font-size: 1em;
+                    font-weight: 700;
+                    line-height: 1.5em;
+                    text-align: left;">Martini, 081234567890</div>
+                    <div style="color: #6E6E6E;
+                    font-size: 1em;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                    text-align: left;">Jl. Lorem Ipsum Dolor sit Amet IX No. 99
+                    RT 001 RW 099,</div>
+                    <div style="color: #6E6E6E;
+                    font-size: 1em;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                    text-align: left;">Consectetur, Adipiscing
+                    </div>
+                    <div style="color: #6E6E6E;
+                    font-size: 1em;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                    text-align: left;">Jakarta 12345, Indonesia</div>
+                </div>
             </div>
-            <!-- end of example -->
 
             <div class="with-padding" style="margin-top:20px;">
                 <table style="width: 100%; margin-bottom: 1.25em;">
@@ -391,7 +388,7 @@
                         <td class="half-width is-grey text-style-3 align-left">
                             Potongan Diskon
                         </td>
-                        <td class="half-width is-indigo text-style-3 align-right bold">
+                        <td class="half-width is-indigo text-style-3 align-right bold with-spacing">
                             - Rp 50.000
                         </td>
                     </tr>
@@ -400,11 +397,19 @@
                         <td class="half-width bold is-grey text-style-3 align-left">
                             Total Tagihan
                         </td>
-                        <td class="half-width is-red text-style-3 align-right bold">
+                        <td class="half-width is-red text-style-3 align-right bold with-spacing">
                             Rp 1.329.600
                         </td>
                     </tr>
                 </table>
+
+                <div class="text-style-3 is-grey align-left" style="margin-top: 1.5em;">
+                    Apakah kamu ingin berbelanja produk lain?
+                </div>
+        
+                <a href="https://parenting.orami.co.id/shopping" class="outline-button">
+                    Belanja Produk Lain
+                </a>
 
             <div class="separator"></div>
             

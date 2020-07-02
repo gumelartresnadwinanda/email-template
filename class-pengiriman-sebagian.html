@@ -35,6 +35,9 @@
             .with-padding {
                 padding: 0 2em;
             }
+            .full-padding {
+                padding: 1.25em 2em 1em 2em;
+            }
             
             .text-style-1 {
                 font-size: 2em; 
@@ -71,7 +74,7 @@
             .call-center-text{
                 color: #FFFFFF;
                 font-size: 0.875em;
-                line-height: 1em;
+                line-height: 1.5em;
                 text-align: center;
                 margin-top: 1em;
                 margin-bottom: 1em;
@@ -117,7 +120,7 @@
             }
 
             .store-card {
-                border-top: 4px solid #FFCBCB;
+                border-top: 1em solid #EDEDF4;
                 border-bottom: 1em solid #EDEDF4;
             }
             .footer-card {
@@ -128,7 +131,6 @@
 
             .order-list {
                 width: 100%;
-                padding-bottom: 18px;
             }
 
             .separator {
@@ -187,12 +189,21 @@
                 width: 100%;
             }
 
+            .with-spacing {
+                letter-spacing: 0.5px;
+            }
+
+            .with-large-spacing {
+                letter-spacing: 0.75px;
+            }
+
+            .grey-separator {
+                border-bottom: 1em solid #EDEDF4;
+            }
+
             @media screen and (max-width: 500px) {
                 #body, table {
                     font-size: 12px;
-                }
-                .order-list {
-                    padding-bottom: 12px;
                 }
             }
         </style>
@@ -223,11 +234,11 @@
             <tr>
                 <td style="width: 50%;">
                     <div class="text-style-4 is-grey bold">Toko</div>
-                    <div class="text-style-4 is-grey">Official Store SGM</div>
+                    <div class="text-style-4 is-grey with-spacing">Official Store SGM</div>
                 </td>
                 <td style="width: 50%;">
                     <div class="text-style-4 is-grey bold">Waktu Pengiriman</div>
-                    <div class="text-style-4 is-grey">Kamis, 16 April 2020</div>
+                    <div class="text-style-4 is-grey with-spacing">Kamis, 16 April 2020</div>
                 </td>
             </tr>
             <tr class="spacer"></tr>
@@ -235,11 +246,11 @@
             <tr>
                 <td style="width: 50%;">
                     <div class="text-style-4 is-grey bold">Jasa Pengiriman</div>
-                    <div class="text-style-4 is-grey">JNE YES</div>
+                    <div class="text-style-4 is-grey with-spacing">JNE YES</div>
                 </td>
                 <td style="width: 50%;">
                     <div class="text-style-4 is-grey bold">Nomor Invoice</div>
-                    <div class="text-style-4 is-grey">INV/20202012312/XX/IV</div>
+                    <div class="text-style-4 is-grey with-spacing">INV/20202012312/XX/IV</div>
                 </td>
             </tr>
             <tr class="spacer"></tr>
@@ -247,11 +258,11 @@
             <tr>
                 <td style="width: 50%;">
                     <div class="text-style-4 is-grey bold">Nomor Resi</div>
-                    <div class="text-style-4 is-grey">12345-1234567890</div>
+                    <div class="text-style-4 is-grey with-spacing">12345-1234567890</div>
                 </td>
                 <td style="width: 50%;">
                     <div class="text-style-4 is-grey bold">Status Pembayaran</div>
-                    <div class="text-style-4 is-grey">Dalam Pengiriman</div>
+                    <div class="text-style-4 is-grey with-spacing">Dalam Pengiriman</div>
                 </td>
             </tr>
         </table>
@@ -276,9 +287,12 @@
             </table>
 
 
-            <div class="text-style-5 align-left bold is-grey with-padding" style="margin-top: 1.5em; margin-bottom: 1em;">Pengiriman #1234456</div>
+            <div class="text-style-5 align-left bold is-grey with-padding" style="margin-top: 1.5em; margin-bottom: 1em;"></div>
     
-            <div class="with-padding">
+            <div class="store-card full-padding">
+                <div class="text-style-5 is-grey bold" style="margin-bottom: 1em;">
+                    Pengiriman #12345678
+                </div>
                 <table class="order-list">
                     <!-- loop product here -->
                     <tr>
@@ -287,10 +301,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="half-width text-style-3 is-soft-grey align-left bold">
+                        <td class="half-width text-style-3 is-soft-grey align-left bold with-spacing">
                             2 x Rp 319.800
                         </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
+                        <td class="half-width is-grey text-style-3 bold align-right with-spacing">
                             Rp 639.800
                         </td>
                     </tr>
@@ -304,49 +318,75 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="half-width text-style-3 is-soft-grey align-left bold">
+                        <td class="half-width text-style-3 is-soft-grey align-left bold with-spacing">
                             2 x Rp 319.800
                         </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
+                        <td class="half-width is-grey text-style-3 bold align-right with-spacing">
                             Rp 639.800
                         </td>
                     </tr>
                     <tr class="spacer"></tr>
                     <!-- end of example looped product -->
+                </table>
+            </div>
 
+            <div class="grey-separator full-padding">
+                <div class="text-style-5 is-grey bold" style="margin-bottom: 1em;">
+                    Biaya Pengiriman
+                </div>
+                <div class="text-style-5 is-soft-grey bold">
+                    Regular
+                </div>
+                <table style="width: 100%;">
                     <tr>
-                        <td class="half-width is-soft-grey text-style-3 bold align-left">
-                            Reguler <span class="is-light-grey">(5-7 hari)</span>
+                        <td class="half-width is-soft-grey bold text-style-3 align-left" style="width: 50%;">
+                            JNE YES <span class="is-light-grey">(5-7 hari)
                         </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
+                        <td class="half-width is-grey text-style-3 bold align-right with-spacing" style="width: 50%;">
                             Rp 50.000
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="half-width is-soft-grey text-style-3 align-left">
-                            JNE YES, JNE OKE, SiCepat
                         </td>
                     </tr>
 
                 </table>
-            </div>
- 
-            <div class="is-grey text-style-3 bold" style="margin: 1em 2em 1em 2em;">
-                Tujuan Pengiriman
-            </div>
-            <div class="with-margin" style="background-color: #F7F7FF;
-            border-radius: 4px; padding: 1.5em;">
-                <div class="is-grey text-style-3 bold">Rumah</div>
-                <div class="is-grey text-style-3 bold">Martini, 081234567890</div>
-                <div class="is-soft-grey text-style-3">Jl. Lorem Ipsum Dolor sit Amet IX No. 99
-                RT 001 RW 099,</div>
-                <div class="is-soft-grey text-style-3">Consectetur, Adipiscing</div>
-                <div class="is-soft-grey text-style-3">Jakarta 12345, Indonesia</div>
+                <div style="margin: 1.5em 0 .5em 0; color: #666666; font-size: 1em; font-weight: 700; line-height: 1.5em; text-align: left;">
+                    Tujuan Pengiriman
+                </div>
+                <div style="background-color: #F7F7FF;
+                border-radius: 4px; padding: 1.5em;">
+                    <div style="color: #666666;
+                    font-size: 1em;
+                    font-weight: 700;
+                    line-height: 1.5em;
+                    text-align: left;">Rumah</div>
+                    <div style="color: #666666;
+                    font-size: 1em;
+                    font-weight: 700;
+                    line-height: 1.5em;
+                    text-align: left;">Martini, 081234567890</div>
+                    <div style="color: #6E6E6E;
+                    font-size: 1em;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                    text-align: left;">Jl. Lorem Ipsum Dolor sit Amet IX No. 99
+                    RT 001 RW 099,</div>
+                    <div style="color: #6E6E6E;
+                    font-size: 1em;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                    text-align: left;">Consectetur, Adipiscing
+                    </div>
+                    <div style="color: #6E6E6E;
+                    font-size: 1em;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                    text-align: left;">Jakarta 12345, Indonesia</div>
+                </div>
             </div>
 
-            <div class="text-style-5 align-left bold is-grey with-padding" style="margin-top: 1.5em; margin-bottom: 1em;">Produk Segera Dikirim</div>
-    
-            <div class="with-padding">
+            <div class="grey-separator full-padding">
+                <div class="text-style-5 is-grey bold" style="margin-bottom: 1em;">
+                    Produk Segera Dikirim
+                </div>
                 <table class="order-list">
                     <!-- loop product here -->
                     <tr>
@@ -355,44 +395,63 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="half-width text-style-3 is-soft-grey align-left bold">
+                        <td class="half-width text-style-3 is-soft-grey align-left bold with-spacing">
                             2 x Rp 319.800
                         </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
+                        <td class="half-width is-grey text-style-3 bold align-right with-spacing">
                             Rp 639.800
                         </td>
                     </tr>
                     <tr class="spacer"></tr>
                     <!-- end of product loop -->
 
+                    <!-- example looped product (delete this after using loop) -->
                     <tr>
-                        <td class="half-width is-soft-grey text-style-3 bold align-left">
-                            Reguler <span class="is-light-grey">(5-7 hari)</span>
-                        </td>
-                        <td class="half-width is-grey text-style-3 bold align-right">
-                            Rp 50.000
+                        <td class="text-style-3 align-left is-grey half-width">
+                            Susu SGM Eksplor Advance SOYA Rasa Madu400 gr
                         </td>
                     </tr>
                     <tr>
-                        <td class="half-width is-soft-grey text-style-3 align-left">
-                            JNE YES, JNE OKE, SiCepat
+                        <td class="half-width text-style-3 is-soft-grey align-left bold with-spacing">
+                            2 x Rp 319.800
+                        </td>
+                        <td class="half-width is-grey text-style-3 bold align-right with-spacing">
+                            Rp 639.800
                         </td>
                     </tr>
-
+                    <tr class="spacer"></tr>
+                    <!-- end of example looped product -->
                 </table>
             </div>
-
+            
             <div class="with-padding" style="margin-top:20px;">
                 <table style="width: 100%; margin-bottom: 1.25em;">
                     <tr>
-                        <td class="half-width bold is-grey text-style-3 align-left">
-                            Total Pembayaran
+                        <td class="half-width is-grey text-style-3 align-left">
+                            Potongan Diskon
                         </td>
-                        <td class="half-width is-red text-style-3 align-right bold">
+                        <td class="half-width is-indigo text-style-3 align-right bold with-spacing">
+                            - Rp 50.000
+                        </td>
+                    </tr>
+                    <tr class="half-spacer"></tr>
+                    <tr>
+                        <td class="half-width bold is-grey text-style-3 align-left">
+                            Total Tagihan
+                        </td>
+                        <td class="half-width is-red text-style-3 align-right bold with-spacing">
                             Rp 1.329.600
                         </td>
                     </tr>
                 </table>
+
+                <div class="text-style-3 is-grey align-left" style="margin-top: 1.5em;">
+                    Apakah kamu ingin berbelanja produk lain?
+                </div>
+        
+                <a href="https://parenting.orami.co.id/shopping" class="outline-button">
+                    Belanja Produk Lain
+                </a>
 
             <div class="separator"></div>
             
